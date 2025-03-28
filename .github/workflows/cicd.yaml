@@ -14,6 +14,9 @@ jobs:
               uses: actions/setup-node@v2
               with:
                     node-version: '18'
+                
+            - name: "checkout code"
+              run: node --version
 
 
   
