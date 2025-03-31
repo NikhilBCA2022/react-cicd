@@ -22,7 +22,7 @@ jobs:
             run: node -v
 
           - name: " lsit the directory"
-            run: ls -la
+            run: ls 
           
 
           - name: "install dependencies"
@@ -33,6 +33,11 @@ jobs:
             
           - name: "converting the code"
             run: npm run build
+
+          - name: "check lint errors"
+            run: npm run lint
+
+          
           
 
           

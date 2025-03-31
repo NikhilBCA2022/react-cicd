@@ -16,6 +16,18 @@ export default [
         sourceType: 'module',
       },
     },
+    overrides: [
+      {
+        files: ['**/*.test.{js,jsx}'],
+        languageOptions: {
+          globals: {
+            ...globals.browser,
+            ...globals.jest,
+            ...globals['jest-dom'],
+          },
+        },
+      },
+    ],
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
