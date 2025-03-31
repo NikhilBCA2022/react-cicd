@@ -34,7 +34,7 @@ jobs:
             #   run:  vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}    
               
             - name : "vercel login"
-              run: vercel login --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+              run: vercel login --yes --token=${{ secrets.VERCEL_TOKEN }}
                
 
             - name: "deploy to production server"
