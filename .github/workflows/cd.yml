@@ -36,9 +36,8 @@ jobs:
               run: ls 
 
             - name: "deploy to vercel"
-              run: vercel --prod --confirm 
-              env:
-                VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }} --name  ${{ secrets.VERCEL_PROJECT_NAME }}
+              run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm --name="react-cicd-pipeline" --cwd ./src --prod --yes --scope "react-cicd-pipeline" --env "NODE_ENV=production" --env "API_URL=https://myweb.com"
+              
                
 
             - name: "deploy to production server"
