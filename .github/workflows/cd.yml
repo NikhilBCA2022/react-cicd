@@ -31,7 +31,7 @@ jobs:
               run: ls 
 
             - name: "deploy to vercel"
-              run:  vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --name="react-cicd-pipeline"                  
+              run:  vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }} --confirm --name="react-cicd-pipeline"                  
                
 
             - name: "deploy to production server"
