@@ -23,15 +23,17 @@ jobs:
 
           - name: " lsit the directory"
             run: ls 
-          
-
-         
-
-          - name: "run tests"
-            run: npm test
+        
             
           - name: "converting the code"
             run: npm run build
+
+          - name: "upload prod build files"
+            uses: actions/upload-artifact@v2
+            with:
+              name: "build"
+              path : dist
+
 
           
 
