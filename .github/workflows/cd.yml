@@ -31,10 +31,10 @@ jobs:
               run: ls 
 
             # - name: "deploy to vercel"
-            #   run:  vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}    
+            #   run:  vercel --prod --yes --token=   
               
             - name : "vercel login"
-              run: vercel login  --token=${{ secrets.VERCEL_TOKEN }}
+              run: vercel login ${{ secrets.VERCEL_TOKEN }}
                
 
             - name: "deploy to production server"
