@@ -10,23 +10,14 @@ jobs:
     build-and-test:
         runs-on: ubuntu-latest
         steps:
-            - name: "setup node"
-              uses: actions/setup-node@v2
-              with:
-                    node-version: '18'
-                
-            - name: "checkout code"
-              run: node --version
+          - name: Checkout code
+            uses: actions/checkout@v2
 
-            - name : "clone the repo"
-              uses: actions/checkout@v2
-
-            - name : "install dependencies"
-              run: npm install
-
-            - name : "list files"
-              run: ls 
-              
+          - name: Set up Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: '16'  
+            
 
 
 
