@@ -27,7 +27,14 @@ jobs:
 
           - name: "install dependencies"
             run: npm install
+
+          - name: "run tests"
+            run: npm test
             
+          - name: "converting the code"
+            run: npm run build
+          
+
           
 
 
