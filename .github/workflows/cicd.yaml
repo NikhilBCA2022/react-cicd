@@ -21,6 +21,10 @@ jobs:
           - name: check node version
             run: node -v
 
+          - name: " lsit the directory"
+            run: ls -la
+          
+
           - name: "install dependencies"
             run: npm install
             
