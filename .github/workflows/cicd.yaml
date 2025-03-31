@@ -31,7 +31,7 @@ jobs:
           - name: "upload prod build files"
             uses: actions/upload-artifact@v2
             with:
-              name: "build"
+              name: build
               path : dist
 
 
