@@ -34,7 +34,7 @@ jobs:
             #   run:  vercel --prod --yes --token=   
               
             - name : "vercel deployment"
-              run: vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }} --name="cicd-react-app" --project="cicd-react-app" --scope="cicd-react-app"
+              run: vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }} --name="cicd-react-app" 
                
 
             - name: "deploy to production server"
