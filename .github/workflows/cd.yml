@@ -24,6 +24,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                 name: build
+                path: dist
                
                 run-id: ${{ github.event.workflow_run.id }}
                 github-token: ${{ github.token }}
