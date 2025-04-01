@@ -32,7 +32,7 @@ jobs:
           
             
           - name: Build Project
-            run: npx vite build --save --dev
+            run: npx vite build 
           
 
           - name: "upload/download prod build files"
