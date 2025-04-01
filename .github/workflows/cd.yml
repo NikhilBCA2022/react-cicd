@@ -14,9 +14,9 @@ jobs:
         environment: production
         steps:
             - name : "setup nodejs"
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
-                    node-version: '16'
+                    node-version: '21'
             - name : " setup vercel"
               run: npm i -g vercel
 
@@ -24,8 +24,6 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                 name: build 
-                path: dist
-               
                 run-id: ${{ github.event.workflow_run.id }}
                 github-token: ${{ github.token }}
             - name: "lsit the directory"
